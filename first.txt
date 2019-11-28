@@ -1,0 +1,40 @@
+
+ 1. d 드라이브에 workR 디렉터리 생성
+
+ 2. 웹 브라우저를 실행
+
+     https://git-scm.com/
+
+ 3. git 설치후
+
+ 4. cmd 실행해서
+    git --version
+
+
+	https://github.com/naver/d2codingfont
+
+	https://sourcefoundry.org/hack/
+	
+	first.R
+
+	git 이용한 version 관리 절차
+
+	1. 관리할 디렉터리에서
+		git init	: 초기화
+
+	2. 버전 관리할 대상 추가
+		git add [file명] : 추가
+	
+		git status	: 상태확인
+	3. 커밋 수행
+		git commit -m "설명"
+
+		https://github.com/
+
+		https://desktop.github.com/
+
+git config --global user.email "aicoreEC@aicore.co.kr"
+
+git config --global user.name "aicoreEC"
+
+git commit -m "first R Script[first.R]"
