@@ -65,6 +65,7 @@ names( score[ score == max( score ) ] )
 
 #6. 성적에 대한 상자그림을 작성하고, 이상치에 해당하는 과목이 있으면 출력하시오.
 boxplot( score )
+  # 이상치 없음
 
 #7. 다음 조건을 만족하는 위 성적에 대한 히스토그램을 작성하시오.
 #   (그래프 제목: 학생 성적, 막대의 색: 보라색)
@@ -95,15 +96,15 @@ cyl.table
 barplot( cyl.table, main = "Cylender", xlab = '#of cyl', ylab = 'freq' )
 
 #	5. 중량(wt)의 히스토그램을 출력하시오.
-hist( mtcars$wt, main = 'Weight', xlab = 'weight', ylab = 'freq' )
+hist( table( mtcars$wt ), main = 'Weight', xlab = 'weight', ylab = 'freq' )
 
 #	6. 중량(wt)에 대해 상자그림을 출력하시오.(단, 상자그림으로부터 관찰할 수 있는정보를 함께 출력하시오.)
 boxplot( mtcars$wt, main = '중량' )
-  # 중량이 평균 이하인 파량이 대체로 많은편이다.
+  # 중량이 대략 평균 이하인 차량이 대체로 많은편이다.
 
 #	7. 배기량(disp)에 대한 상자그림을 출력하시오.(단, 상자그림으로부터 관찰할 수 있는 정보를 함께 출력하시오.)
 boxplot( mtcars$disp, main = '배기량' )
-  # 배기량 200이상이 차량이 대체로 많은편이다.   
+  # 배기량이 대략 중앙값이상인 차량이 대체로 많은편이다.   
 
 #	8. 기어수(gear)를 그룹 정보로 하여 연비(mpg) 자료에 대해 상자그림을 작성작성하고,
 #	   각 그룹의 상자그림을 비교하여 관찰할 수 있는 것이 무엇인지 나타내시오.
