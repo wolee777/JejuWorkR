@@ -8,6 +8,7 @@
 #차원 산점도를 작성하시오. (state.x77은 매트릭스 타입이기 때문에 데이터프레임
 #                으로 변환하여 실습한다.)
 
+library( ggplot2 )
 library( Rtsne )
 
 ds <- data.frame( state.x77 )
@@ -32,8 +33,10 @@ tsne <- Rtsne( ds, dims = 3, perplexity = 10 )
 df.tsne <- data.frame( tsne$Y )
 head( df.tsne )
 
-scatter3d( x = df.tsne$X1, y = df.tsne$X2, z = df.tsne$X3,
-          surface = FALSE )
+scatter3d( x = df.tsne$X1, 
+           y = df.tsne$X2, 
+           z = df.tsne$X3,
+           surface = FALSE )
 
 
 #문2)
@@ -62,7 +65,9 @@ tsne <- Rtsne( ds, dims = 3, perplexity = 10 )
 df.tsne <- data.frame( tsne$Y )
 head( df.tsne )
 
-scatter3d( x = df.tsne$X1, y = df.tsne$X2, z = df.tsne$X3,
+scatter3d( x = df.tsne$X1, 
+           y = df.tsne$X2, 
+           z = df.tsne$X3,
            surface = FALSE )
 
 #문3) 
@@ -72,7 +77,7 @@ scatter3d( x = df.tsne$X1, y = df.tsne$X2, z = df.tsne$X3,
 
 library( ggmap )
 
-register_google( key = '자신의 구글키' ) # 구글키 등록
+register_google( key = 'AIzaSyDlmljbgzrqBC-ug1Mr1Q1Y4gvEOkOcR_g' ) # 구글키 등록
 
 gc <- geocode( enc2utf8( "서울시청" ) ) 
 gc
